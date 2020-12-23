@@ -1,0 +1,161 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header.fixed {
+  position: fixed;
+  background-color: rgb(223, 240, 243);
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: $font-family_title;
+
+  padding: 40px 0;
+}
+
+.header__nav.active {
+  display: block;
+}
+
+.nav__item {
+  display: inline-block;
+  margin: 0 30px;
+
+  font-family: $font-family_title;
+  font-size: $font-size_second-title;
+  color: $color_title;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+
+  transition: color 0.2s linear, border-bottom-color 0.2s linear;
+}
+
+.nav__item:hover {
+  color: $color_accent;
+  border-bottom-color: $color_accent;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav-toggle {
+  position: relative;
+  display: none;
+
+  font-size: 0;
+  color: transparent;
+
+  border: 0;
+  background: none;
+  outline: none;
+
+  cursor: pointer;
+
+  width: 25px;
+  padding: 10px 0;
+}
+
+.nav-toggle.active .nav-toggle__item {
+  background: none;
+}
+
+.nav-toggle.active .nav-toggle__item:before {
+  transform-origin: left top;
+  transform: rotate(45deg) translateX(-2px);
+}
+.nav-toggle.active .nav-toggle__item:after {
+  transform-origin: left bottom;
+  transform: rotate(-45deg) translateX(-3px);
+}
+
+.nav-toggle__item {
+  display: block;
+  margin: auto;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: $color_title;
+}
+
+.nav-toggle__item::before,
+.nav-toggle__item::after {
+  display: block;
+  content: "";
+
+  position: absolute;
+  z-index: inherit;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: $color_title;
+}
+.nav-toggle__item::before {
+  top: -7px;
+}
+
+.nav-toggle__item::after {
+  bottom: -7px;
+}
+
+@media (max-width: $media-laptop) {
+  .header__inner {
+    padding: 30px 0;
+  }
+
+  .nav__item {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: $media-portrait) {
+  .header__inner {
+    padding: 20px 0;
+  }
+
+  .header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    display: none;
+    background-color: rgb(223, 240, 243);
+  }
+
+  .nav__item {
+    display: block;
+    padding: 20px 20px;
+    text-align: right;
+    &:hover {
+      border-bottom: 2px solid transparent;
+    }
+    &:last-child {
+      margin-right: 15px;
+    }
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}

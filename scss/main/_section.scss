@@ -1,0 +1,87 @@
+.section {
+  padding: 135px 0;
+}
+
+.section--skills {
+  background-color: #f8f9f9;
+
+  background-image: url("../../assets/img/skills/img.jpg");
+  background-position: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section--abilities {
+  background-color: #f8f9f9;
+
+  padding: 100px 0;
+}
+
+.section--numbers {
+  background-color: $color_accent;
+  color: white;
+
+  padding: 100px 0;
+}
+
+.section--logos {
+  padding: 100px 0;
+}
+
+.section--form {
+  background-color: #f8f9f9;
+}
+
+.section__header {
+  text-align: center;
+  max-width: 640px;
+
+  margin: 0 auto;
+}
+
+.section__header--left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.section__title {
+  font-size: $font-size_title;
+  font-family: $font-family_title;
+  color: $color_title;
+
+  margin-bottom: 35px;
+}
+
+.section__text {
+  font-size: $font-size_main-text;
+  font-family: $font-family_main;
+  color: $color_main-text;
+  line-height: $line-height-text;
+
+  margin-bottom: 40px;
+}
+
+@media (max-width: $media-portrait) {
+  .section {
+    padding: 80px 0;
+  }
+  .section__title {
+    font-size: $font-size_title-sm;
+    margin-bottom: 25px;
+  }
+  .section--skills {
+    background: none;
+    background-color: #f8f9f9;
+  }
+
+  .section__text {
+    font-size: $font-size_main-text-sm;
+    line-height: $line-height-text-sm;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: $media-phone) {
+  .section {
+    padding: 60px 0;
+  }
+}

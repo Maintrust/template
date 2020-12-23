@@ -1,0 +1,30 @@
+.logos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logos__item {
+  width: 20%;
+}
+
+.logos__img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: $media-portrait) {
+  .logos {
+    justify-content: center;
+  }
+  .logos__item {
+    width: 33.333%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: $media-phone) {
+  .logos__item {
+    width: 100%;
+  }
+}

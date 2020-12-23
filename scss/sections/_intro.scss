@@ -1,0 +1,54 @@
+.intro {
+  background-color: #e9e9e9;
+  background: url("../../assets/img/intro/bg.jpg") no-repeat center;
+
+  background-size: cover;
+
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.intro__inner {
+  padding-left: 50%;
+}
+.intro__title {
+  font-family: $font-family_title;
+  font-size: $font-size_intro-title;
+  color: $color_title;
+
+  margin-bottom: 30px;
+}
+
+.intro__text {
+  font-family: $font-family_main;
+  font-size: $font-size_intro-main-text;
+  color: $color_main-text;
+
+  margin-bottom: 35px;
+
+  line-height: $line-height-text;
+}
+
+.intro__button {
+  @extend %button-main;
+}
+
+@media (max-width: $media-portrait) {
+  .intro__inner {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .intro__title {
+    font-size: $font-size_intro-title-sm;
+    margin-bottom: 25px;
+  }
+
+  .intro__text {
+    font-size: $font-size_intro-text-sm;
+    line-height: $line-height-text-sm;
+    margin-bottom: 30px;
+  }
+}

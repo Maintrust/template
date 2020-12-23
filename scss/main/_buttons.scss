@@ -1,0 +1,23 @@
+%button-main {
+  border: none;
+  outline: none;
+
+  padding: 23px 0;
+  width: 180px;
+
+  background-color: $color_accent;
+  color: white;
+
+  text-transform: uppercase;
+  font-family: $font-family_title;
+  font-size: $font-size_second-title;
+
+  cursor: pointer;
+
+  transition: box-shadow 0.2s linear;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 180px 0 0 0 $color_title;
+  }
+}

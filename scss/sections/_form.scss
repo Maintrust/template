@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form__item {
+  margin: 15px;
+  flex: 1 1 50ch;
+  text-align: center;
+
+  input,
+  textarea {
+    width: 100%;
+    background: white;
+    border: none;
+    outline: none;
+
+    padding: 18px 20px;
+
+    color: $color_main-text;
+
+    font-family: $font-family_main;
+  }
+
+  ::placeholder {
+    color: $color_main-text;
+  }
+
+  textarea {
+    height: 200px;
+  }
+}
+
+.form__item:nth-child(3),
+.form__item:nth-child(4) {
+  flex: 1 1 100ch;
+}
+
+.form__btn {
+  @extend %button-main;
+}
+
+@media (max-width: $media-portrait) {
+  .form__item {
+    margin: 10px 0;
+  }
+}
